@@ -24,6 +24,7 @@
             <div class="v-cal-day__hour-content">
               <div class="v-cal-event-list" :class="{'tiny-events': day.events.filter(e => !e.time).length > 2}">
                 <div class="v-cal-event-item"
+                     :style="{ 'backgroundColor': event.color, 'color': event.color }"
                      v-for="event in day.events.filter(e => !e.time)" :title="event.label"
                      @click.stop="eventBus.$emit('event-clicked', event)">
                   <span class="v-cal-event-time">{{ event.time | formatEventTime(use12) }}</span>{{ event.label }}</div>
@@ -38,10 +39,13 @@
             <div class="v-cal-day__hour-content">
               <div class="v-cal-event-list">
                 <div class="v-cal-event-item"
+                     :style="{ 'backgroundColor': event.color, 'color': event.color }"
                      v-if="time.hour() === event.time"
                      v-for="event in day.events" :title="event.label"
                      @click.stop="eventBus.$emit('event-clicked', event)">
-                  <span class="v-cal-event-time">{{ event.time | formatEventTime(use12) }}</span>{{ event.label }}</div>
+                  <span class="v-cal-event-time">{{ event.time | formatEventTime(use12) }}</span>
+                  <span class="v-cal-event-name">{{ event.label }}</span>
+                </div>
               </div>
             </div>
           </div>

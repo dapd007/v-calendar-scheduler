@@ -16,6 +16,12 @@
     "start": "npm run build-sass -- --watch",
     "start-test": "npm run test-sass -- --watch"
   },
+  "keywords": [
+    "vue",
+    "calendar",
+    "schedule",
+    "events"
+  ],
   "dependencies": {
     "moment": "^2.22.1"
   },
