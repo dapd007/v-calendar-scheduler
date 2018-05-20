@@ -1,6 +1,3 @@
-// import VueScheduler from 'v-calendar-scheduler';
-// import 'v-calendar-scheduler/lib/main.css';
-
 import VueScheduler from '../../index';
 import '../../lib/main.css';
 
@@ -11,26 +8,24 @@ export default ({
     siteData // site metadata
 }) => {
     Vue.use(VueScheduler, {
-        settings: {
-            // locale: 'es',
-            // minDate: min,
-            // maxDate: max,
-            // labels: {
-            //   today: 'Hoy',
-            //   back: 'Atrás',
-            //   next: 'Siguiente',
-            //   month: 'Mes',
-            //   week: 'Semana',
-            //   day: 'Día',
-            //   all_day: 'Todo el día'
-            // },
-            // timeRange: [11,20],
-            availableViews: ['month', 'week', 'day'],
-            // initialDate: date,
-            // initialView: 'week',
-            // use12: true,
-            showTimeMarker: true,
-            // showTodayButton: false
-        }
+        // locale: 'es',
+        // minDate: min,
+        // maxDate: max,
+        // labels: {
+        //   today: 'Hoy',
+        //   back: 'Atrás',
+        //   next: 'Siguiente',
+        //   month: 'Mes',
+        //   week: 'Semana',
+        //   day: 'Día',
+        //   all_day: 'Todo el día'
+        // },
+        // timeRange: [11,20],
+        // availableViews: ['month'],
+        // initialDate: date,
+        // initialView: 'week',
+        // use12: true,
+        // showTimeMarker: true,
+        // showTodayButton: false
     });
 }

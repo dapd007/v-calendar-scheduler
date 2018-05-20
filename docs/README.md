@@ -1,6 +1,14 @@
 ---
 home: true
+actionText: Get Started →
+actionLink: /guide/
+footer: MIT Licensed | Copyright © 2018-present David Paternina
 ---
-'# Hello VuePress' 
+
+<style>
+    .home {
+        max-width: 1200px;
+    }
+</style>
 
 <vue-scheduler/>
