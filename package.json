@@ -14,7 +14,9 @@
     "build-sass": "node-sass --output-style compressed --source-map true scss/main.scss lib/main.css --importer node_modules/node-sass-import",
     "deploy": "npm run build && npm run docs",
     "start": "npm run build-sass -- --watch",
-    "start-test": "npm run test-sass -- --watch"
+    "start-test": "npm run test-sass -- --watch",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "keywords": [
     "vue",
@@ -33,6 +35,7 @@
     "node-sass": "^4.5.3",
     "node-sass-import": "^1.1.1",
     "postcss-cli": "^4.1.0",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "vuepress": "^0.8.4"
   }
 }
