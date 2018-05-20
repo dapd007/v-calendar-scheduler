@@ -1,4 +1,5 @@
 module.exports = {
+    base: '/v-calendar-scheduler/',
     title: 'Vue Calendar',
     description: 'Calendar scheduler component for VueJs',
     themeConfig: {
