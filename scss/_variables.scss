@@ -1,0 +1,79 @@
+//  Initial variables
+$white: #fff;
+$v-cal-whitish: #fcfcfc;
+$v-cal-light-grey: #D7DAE2;
+$v-cal-blueish-grey: #4D4F5C;
+$v-cal-blue: #3B86FF;
+
+//  Derived variables
+
+$v-cal-font-color: $v-cal-blueish-grey;
+$v-cal-primary: $v-cal-blue;
+
+//  Calendar body
+$v-cal-body-bg: $white;
+$v-cal-body-shadow: 0 2px 6px rgba(0,0,0,.04);;
+$v-cal-body-padding: 20px;
+
+//  Calendar header
+$v-cal-header-padding: 0 0 40px;
+
+//  Calendar content
+$v-cal-content-border-color: #EAF0F4;
+
+//  Calendar content head
+$v-cal-days-head-bg: #F5F6FA;
+$v-cal-days-head-border-color: #EAF0F4;
+$v-cal-days-head-color: #A3A6B4;
+$v-cal-days-head-font-size: .75rem;
+$v-cal-days-head-font-weight: bold;
+
+//  Days - Month
+$v-cal-day-border-color: #EAF0F4;
+$v-cal-day-number-font-size: .75rem;
+$v-cal-day-number-padding: 10px;
+$v-cal-day-month-height: 140px;
+
+//  Days
+$v-cal-day-color: #43425D;
+$v-cal-day-diff-month-color: rgba(67, 66, 93, .3);
+
+$v-cal-day-today-bg: #F5F6FA;
+
+$v-cal-day-disabled-bg: #f0f0f0;
+$v-cal-day-disabled-color: #b0b0b0;
+
+$v-cal-times-font-size: .8125rem;
+$v-cal-times-border-color: #EAF0F4;
+
+//  Events
+$v-cal-events-list-padding: 2px;
+$v-cal-event-bg: $v-cal-primary;
+$v-cal-event-color: $white;
+$v-cal-event-border-radius: 4px;
+
+$v-cal-event-padding-sides: 14px;
+$v-cal-event-padding: 7px $v-cal-event-padding-sides;
+
+$v-cal-event-week-padding: 3px 14px;
+$v-cal-event-week-font-size: .9rem;
+
+//  Time marker
+$v-cal-time-marker-color: $v-cal-blue;
+
+//  Buttons
+$v-cal-button-bg: $white;
+$v-cal-button-shadow: 0 2px 3px rgba(0,0,0,.05);
+$v-cal-button-padding: 8px 18px;
+$v-cal-button-border-color: $v-cal-light-grey;
+$v-cal-button-border-radius: 4px;
+$v-cal-button-active-color: $v-cal-primary;
+$v-cal-button-hover-color: $v-cal-primary;
+$v-cal-button-hover-bg: $v-cal-whitish;
+$v-cal-button-disabled-bg: #f0f0f0;
+$v-cal-button-disabled-color: #d0d0d0;
+$v-cal-button-disabled-cursor: not-allowed;
+
+//  Title
+$v-cal-title-font-size: 18px;
+

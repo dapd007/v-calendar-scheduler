@@ -1,0 +1,32 @@
+{
+  "name": "v-calendar-scheduler",
+  "version": "0.5.0",
+  "license": "MIT",
+  "description": "Calendar scheduler component for VueJs",
+  "author": "David Paternina <david@fanxielab.com>",
+  "repository": "https://github.com/dapd007/v-calendar-scheduler",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output lib/main.css lib/main.css",
+    "build-clean": "rimraf lib",
+    "build-sass": "node-sass --output-style compressed --source-map true scss/main.scss lib/main.css --importer node_modules/node-sass-import",
+    "deploy": "npm run build && npm run docs",
+    "start": "npm run build-sass -- --watch",
+    "start-test": "npm run test-sass -- --watch"
+  },
+  "dependencies": {
+    "moment": "^2.22.1"
+  },
+  "peerDependencies": {
+    "vue": "^2.5.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "node-sass": "^4.5.3",
+    "node-sass-import": "^1.1.1",
+    "postcss-cli": "^4.1.0",
+    "rimraf": "^2.6.1"
+  }
+}
