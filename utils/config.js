@@ -10,7 +10,7 @@ export const defaultLabels = {
 
 export const defaultViews = ['month', 'week', 'day'];
 
-const config = {
+let config = {
   locale: 'en',
   showTodayButton: true,
   minDate: null,
@@ -26,4 +26,4 @@ const config = {
 
 export default config
 
-export const setOptions = options => { this.config = options };
+export const setOptions = options => { config = options };

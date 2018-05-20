@@ -10,7 +10,7 @@ import moment from 'moment';
 export default {
   install: (Vue, options = {}) => {
 
-    setOptions(Object.assign(config, options.settings));
+    setOptions(Object.assign(config, options));
     moment.locale(config.locale);
 
     Vue.component('vue-scheduler', VueScheduler);
