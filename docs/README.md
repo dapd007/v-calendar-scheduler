@@ -12,3 +12,5 @@ footer: MIT Licensed | Copyright © 2018-present David Paternina
 </style>
 
 <vue-scheduler/>
+
+Created by [David Paternina](http://davidpaternina.com/)

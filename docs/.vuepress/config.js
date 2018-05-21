@@ -1,8 +1,11 @@
 module.exports = {
+    base: '/v-calendar-scheduler/',
     title: 'Vue Calendar',
     description: 'Calendar scheduler component for VueJs',
+    ga: "UA-116825927-2",
     themeConfig: {
         repo: 'dapd007/v-calendar-scheduler',
+        editLinks: true,
         docsDir: 'docs',
         nav: [
             { text: 'Home', link: '/' },
