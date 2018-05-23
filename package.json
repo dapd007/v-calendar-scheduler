@@ -1,6 +1,6 @@
 {
   "name": "v-calendar-scheduler",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "license": "MIT",
   "description": "Calendar scheduler component for VueJs",
   "homepage": "https://v-calendar.davidpaternina.com/",

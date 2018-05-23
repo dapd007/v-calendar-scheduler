@@ -84,6 +84,8 @@
   }
 
   .v-cal-event-item {
+    position: relative;
+    flex-grow: 1;
     background-color: $v-cal-event-bg;
     color: $v-cal-event-bg;//$v-cal-event-color;
     border-radius: $v-cal-event-border-radius;
@@ -91,7 +93,6 @@
     text-align: left;
     white-space: nowrap;
     overflow: hidden;
-    position: relative;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -161,6 +162,7 @@
       text-align: right;
       min-height: $v-cal-day-month-height;
       padding-bottom: 2px;
+      background-color: $v-cal-day-month-bg;
 
       &.v-cal-day--month {
         overflow: hidden;
@@ -182,6 +184,10 @@
         border-right: 1px solid $v-cal-day-border-color;
       }
 
+      &:not(.is-disabled):hover {
+        background-color: $v-cal-day-month-hover-bg;
+      }
+
       .v-cal-day__number {
         display: block;
         font-size: $v-cal-day-number-font-size;
@@ -195,6 +201,14 @@
     &.is-disabled {
       background-color: $v-cal-day-disabled-bg;
       color: $v-cal-day-disabled-color;
+    }
+  }
+
+  &.v-cal-content--week,
+  &.v-cal-content--day {
+    .v-cal-hour.all-day,
+    .v-cal-day__hour-block.all-day {
+      border-width: 3px !important;
     }
   }
 
@@ -239,8 +253,14 @@
     }
 
     .v-cal-day__hour-block {
+      @include soft_transition;
       padding: 15px;
       position: relative;
+      background-color: $v-cal-time-block-bg;
+
+      &:hover {
+        background-color: $v-cal-time-block-hover-bg;
+      }
 
       &:not(:last-child) {
         border-bottom: 1px solid $v-cal-day-border-color;
@@ -260,25 +280,18 @@
         bottom: 0;
         width: 100%;
         height: 100%;
-        overflow: hidden;
       }
     }
-  }
-
-  &.v-cal-content--week .v-cal-day,
-  &.v-cal-content--day .v-cal-day {
 
     .v-cal-event-list {
-      .v-cal-event-item {
-        padding: $v-cal-event-week-padding;
-        font-size: $v-cal-event-week-font-size;
-      }
+      display: flex;
 
       &.tiny-events {
         display: flex;
         flex-wrap: wrap;
 
         .v-cal-event-item {
+          flex: none;
           width: 15px;
           height: 15px;
           padding: 0;
@@ -292,6 +305,22 @@
         }
       }
     }
+
+    .v-cal-event-item {
+      z-index: 1;
+      box-shadow: 0 0 5px rgba(0,0,0,.25);
+      width: 100%;
+      padding: $v-cal-event-week-padding;
+      font-size: $v-cal-event-week-font-size;
+
+      &.is-overlapping {
+        flex: none;
+      }
+    }
+  }
+
+  &.v-cal-content--week .v-cal-day,
+  &.v-cal-content--day .v-cal-day {
 
     .v-cal-day__hour-block.is-now.has-marker::after,
     &:first-child .v-cal-day__hour-block.is-now.has-marker::before {
