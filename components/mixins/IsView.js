@@ -17,9 +17,6 @@ export default {
     use12: {
       type: Boolean,
       required: true
-    },
-    eventBus: {
-      required: true
     }
   },
   methods: {
@@ -34,16 +31,6 @@ export default {
   watch: {
     activeDate() {
       this.buildCalendar();
-    }
-  },
-  filters: {
-    formatEventTime(hour, use12 = false) {
-      if ( !hour )
-        return '';
-      if ( use12 )
-        return moment(hour, 'HH').format('ha').slice(0, -1);
-
-      return moment(hour, 'HH').format('HH');
     }
   }
 }

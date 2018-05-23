@@ -182,7 +182,6 @@
       },
       activeViewProps() {
         let props = {
-          eventBus: EventBus,
           activeDate: this.activeDate,
           minDate: this.minDate,
           maxDate: this.maxDate,

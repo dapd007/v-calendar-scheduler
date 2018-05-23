@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 export const defaultLabels = {
   today: 'Today',
   back: 'Back',

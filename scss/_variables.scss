@@ -34,6 +34,9 @@ $v-cal-day-number-font-size: .75rem;
 $v-cal-day-number-padding: 10px;
 $v-cal-day-month-height: 140px;
 
+$v-cal-day-month-bg: $white;
+$v-cal-day-month-hover-bg: #fcfcfc;
+
 //  Days
 $v-cal-day-color: #43425D;
 $v-cal-day-diff-month-color: rgba(67, 66, 93, .3);
@@ -45,6 +48,10 @@ $v-cal-day-disabled-color: #b0b0b0;
 
 $v-cal-times-font-size: .8125rem;
 $v-cal-times-border-color: #EAF0F4;
+
+//  Week - Day
+$v-cal-time-block-bg: $white;
+$v-cal-time-block-hover-bg: #fcfcfc;
 
 //  Events
 $v-cal-events-list-padding: 2px;
