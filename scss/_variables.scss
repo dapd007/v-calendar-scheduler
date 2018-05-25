@@ -12,7 +12,7 @@ $v-cal-primary: $v-cal-blue;
 
 //  Calendar body
 $v-cal-body-bg: $white;
-$v-cal-body-shadow: 0 2px 6px rgba(0,0,0,.04);;
+$v-cal-body-shadow: 0 2px 6px rgba(0,0,0,.04);
 $v-cal-body-padding: 20px;
 
 //  Calendar header
@@ -50,7 +50,7 @@ $v-cal-times-font-size: .8125rem;
 $v-cal-times-border-color: #EAF0F4;
 
 //  Week - Day
-$v-cal-time-block-bg: $white;
+$v-cal-time-block-bg: transparent;
 $v-cal-time-block-hover-bg: #fcfcfc;
 
 //  Events
@@ -81,6 +81,32 @@ $v-cal-button-disabled-bg: #f0f0f0;
 $v-cal-button-disabled-color: #d0d0d0;
 $v-cal-button-disabled-cursor: not-allowed;
 
+//  Select
+$v-cal-select-arrow-color: red;
+
 //  Title
 $v-cal-title-font-size: 18px;
 
+//  Dialog
+
+$v-cal-dialog-bg: rgba(0,0,0,.3);
+$v-cal-dialog-shadow: 0 0 6px rgba(0,0,0,.4);
+$v-cal-dialog-card-bg: $white;
+
+$v-cal-dialog-header-padding: 20px;
+$v-cal-dialog-header-border-color: #EAF0F4;
+
+$v-cal-dialog-body-padding: 20px;
+
+$v-cal-field-border-radius: 4px;
+$v-cal-field-padding: 10px 12px;
+
+$v-cal-field-idle-border-color: #E8E9EC;
+$v-cal-field-hover-border-color: #808495;
+$v-cal-field-active-border-color: $v-cal-primary;
+
+$v-cal-dialog-footer-padding: 20px;
+$v-cal-dialog-footer-border-color: #EAF0F4;
+
+$v-cal-dialog-close-width: 18px;
+$v-cal-dialog-close-color: #BCBCCB;

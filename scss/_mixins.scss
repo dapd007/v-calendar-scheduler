@@ -3,3 +3,71 @@
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+
+@mixin unselectable() {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin delete() {
+  @include unselectable;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  height: $v-cal-dialog-close-width;
+  max-height: $v-cal-dialog-close-width;
+  max-width: $v-cal-dialog-close-width;
+  min-height: $v-cal-dialog-close-width;
+  min-width: $v-cal-dialog-close-width;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+  width: $v-cal-dialog-close-width;
+
+  &::before,
+  &::after {
+    background-color: $v-cal-dialog-close-color;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center;
+  }
+
+  &::before {
+    height: 2px;
+    width: 100%;
+  }
+
+  &::after {
+    height: 100%;
+    width: 2px;
+  }
+}
+
+@mixin arrow {
+  border: 3px solid $v-cal-select-arrow-color;
+  border-radius: 2px;
+  border-right: 0;
+  border-top: 0;
+  content: " ";
+  display: block;
+  height: 0.625em;
+  margin-top: -0.4375em;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: rotate(-45deg);
+  transform-origin: center;
+  width: 0.625em;
+}

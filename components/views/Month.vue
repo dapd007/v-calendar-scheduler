@@ -15,7 +15,7 @@
                 <span class="v-cal-day__number">{{ day.d.date() }}</span>
                 <div class="v-cal-event-list">
                     <event-item
-                            v-for="event, index in day.events" :title="event.label"
+                            v-for="event, index in day.events"
                             :key="index"
                             :has-dynamic-size="false"
                             :event="event"

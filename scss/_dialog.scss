@@ -1,0 +1,164 @@
+.v-cal-dialog {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: inherit;
+  }
+
+  .v-cal-dialog__bg {
+    background-color: rgba(0,0,0,.3);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .v-cal-dialog-card {
+    position: absolute;
+    background: $v-cal-dialog-card-bg;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    box-shadow: $v-cal-dialog-shadow;
+  }
+
+  .v-cal-dialog-card__header {
+    display: flex;
+    align-items: center;
+    padding: $v-cal-dialog-header-padding;
+    border-bottom: 1px solid $v-cal-dialog-header-border-color;
+
+    .v-cal-dialog__title {
+      margin: 0;
+    }
+
+    .v-cal-dialog__close {
+      @include delete;
+      padding: 0;
+      margin-left: auto;
+    }
+  }
+
+  .v-cal-dialog-card__body {
+    max-height: 550px;
+    overflow: auto;
+    padding: $v-cal-dialog-body-padding;
+  }
+
+  .v-cal-fields {
+    display: flex;
+    flex-wrap: wrap;
+
+    .v-cal-input-group {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      width: 100%;
+
+      & > label {
+        width: 100%;
+        margin-bottom: 5px;
+
+        input[type="checkbox"],
+        input[type="radio"] {
+          margin-right: 5px;
+        }
+      }
+
+      .v-cal-input {
+        width: auto;
+        flex: 1;
+
+        &:first-of-type {
+          padding-left: 0;
+        }
+
+        &:last-of-type {
+          padding-right: 0;
+        }
+      }
+    }
+
+    .v-cal-input {
+      padding: 10px;
+      width: 100%;
+
+      &.is-inline {
+        label {
+          margin-bottom: 0;
+        }
+      }
+
+      &.is-radio,
+      &.is-checkbox {
+        input {
+          margin-right: 5px;
+        }
+      }
+
+      label {
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="date"],
+      input[type="time"],
+      textarea,
+      select {
+        @include soft_transition;
+        display: block;
+        font-family: inherit;
+        width: 100%;
+        border: 1px solid $v-cal-field-idle-border-color;
+        border-radius: $v-cal-field-border-radius;
+        padding: $v-cal-field-padding;
+
+        //  States
+
+        &:hover {
+          border-color: $v-cal-field-hover-border-color;
+        }
+
+        &:focus, &:active {
+          border-color: $v-cal-field-active-border-color;
+        }
+      }
+
+      textarea {
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 100px;
+        max-height: 150px;
+      }
+
+      select {
+        //-webkit-appearance: none;
+        //-moz-appearance: none;
+        //appearance: none;
+        //position: relative;
+        //
+        //&::after {
+        //  @include arrow;
+        //}
+      }
+    }
+  }
+
+  .v-cal-dialog-card__footer {
+    display: flex;
+    align-items: center;
+    padding: $v-cal-dialog-footer-padding;
+    border-top: 1px solid $v-cal-dialog-footer-border-color;
+    justify-content: flex-end;
+  }
+}
