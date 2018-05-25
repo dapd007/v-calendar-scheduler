@@ -10,6 +10,11 @@
   background-color: $v-cal-body-bg;
   color: $v-cal-font-color;
   box-shadow: $v-cal-body-shadow;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: inherit;
+  }
 }
 
 .v-cal-button {

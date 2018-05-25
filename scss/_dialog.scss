@@ -5,6 +5,11 @@
   top: 0;
   bottom: 0;
   z-index: 999;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: inherit;
+  }
 
   .v-cal-dialog__bg {
     background-color: rgba(0,0,0,.3);
