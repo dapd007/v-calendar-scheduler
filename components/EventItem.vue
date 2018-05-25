@@ -1,11 +1,11 @@
 <template>
     <div ref="event_block" class="v-cal-event-item"
-         :title="event.startTime | formatEventTime(use12) + ' - ' + event.label"
+         :title="event.startTime | formatEventTime(use12) + ' - ' + event.displayText"
          :class="eventClasses"
          @click.stop="eventClicked"
          :style="eventStyles">
         <span class="v-cal-event-time">{{ event.startTime | formatEventTime(use12) }}</span>
-        <span class="v-cal-event-name">{{ event.label }}</span>
+        <span class="v-cal-event-name">{{ event.displayText }}</span>
     </div>
 </template>
 
@@ -57,15 +57,13 @@
             }
         },
         computed: {
-            startTime() {
-                return moment(this.event.startTime, 'HH:mm');
-            },
-            endTime() {
-                return moment(this.event.endTime, 'HH:mm');
-            },
             displayHeight() {
-                const hours = this.endTime.diff(this.startTime, 'hours', true);
-                return hours * this.ancestorHeight;
+
+                const end = this.event.endTime.hours() > 0 ? moment(this.event.endTime) : moment(this.event.endTime).add(1, 'days');
+
+                const hours = end.diff(this.event.startTime, 'hours', true);
+                const bordersOffset = hours - 1;
+                return  ( hours * this.ancestorHeight ) + bordersOffset;
             },
             eventStyles() {
 
@@ -88,8 +86,8 @@
                         });
                     }
 
-                    if ( this.startTime.minutes() > 0 ) {
-                        const distance = ( this.ancestorHeight / 60 ) * this.startTime.minutes();
+                    if ( this.event.startTime.minutes() > 0 ) {
+                        const distance = ( this.ancestorHeight / 60 ) * this.event.startTime.minutes();
                         styles.push({
                             'top': distance + 'px'
                         });
@@ -109,12 +107,10 @@
                 if ( !hour )
                     return '';
 
-                const hourM = moment(hour, 'HH:mm');
-
                 if ( use12 )
-                    return hourM.format( hourM.minutes() > 0 ? 'h.mma' : 'ha' ).slice(0, -1);
+                    return hour.format( hour.minutes() > 0 ? 'h.mma' : 'ha' ).slice(0, -1);
 
-                return hourM.format( hourM.minutes() > 0 ? 'HH.mm' : 'HH' );
+                return hour.format( hour.minutes() > 0 ? 'HH.mm' : 'HH' );
             }
         },
     }

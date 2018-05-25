@@ -47,7 +47,7 @@
                         :key="index"
                         :event="event"
                         :use12="use12"
-                        v-if="event.startTime && time.format('HH') === event.startTime.split(':')[0]">
+                        v-if="event.startTime && time.hours() === event.startTime.hours()">
                 </event-item>
               </div>
             </div>
@@ -72,7 +72,8 @@
         components: { EventItem },
         data() {
             return {
-                days: []
+                days: [],
+                // newEvents: JSON.parse(JSON.stringify(this.events))
             }
         },
         mounted() {
@@ -83,6 +84,9 @@
                 EventBus.$emit('time-clicked', data)
             },
             buildCalendar() {
+                //  Reset events
+                // this.newEvents = JSON.parse(JSON.stringify(this.events));
+
                 this.days = [];
 
                 let now = moment();
@@ -95,14 +99,14 @@
                 do {
                     const day = moment(temp);
 
-                    const dayEvents = this.events.filter( e => moment(e.date).isSame(day, 'day') )
+                    const dayEvents = this.events.filter( e => e.date.isSame(day, 'day') )
                         .sort( (a, b) => {
                             if ( !a.startTime ) return -1;
                             if ( !b.startTime ) return 1;
-                            return moment(a.startTime, 'HH:mm').format('HH') - moment(b.startTime, 'HH:mm').format('HH');
+                            return moment(a.startTime).format('HH') - moment(b.startTime).format('HH');
                         });
                     const mappedEvents = dayEvents.map( event => {
-                        event.overlaps = dayEvents.filter( e => moment(event.startTime, 'HH:mm').isBetween( moment(e.startTime, 'HH:mm'), moment(e.endTime, 'HH:mm') ) && e !== event ).length;
+                        event.overlaps = dayEvents.filter( e => moment(event.startTime).isBetween( moment(e.startTime), moment(e.endTime) ) && e !== event ).length;
                         return event;
                     });
 

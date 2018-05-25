@@ -1,6 +1,8 @@
 @import "./variables";
 @import "./mixins";
 
+@import "./dialog";
+
 .v-cal {
   font-family: inherit;
   font-size: inherit;
@@ -19,8 +21,23 @@
   font-size: 13px;
   @include soft_transition;
 
+  &.is-rounded {
+    border-radius: $v-cal-button-border-radius;
+  }
+
   &.v-cal-button--is-active {
     color: $v-cal-button-active-color;
+  }
+
+  &:hover {
+    color: $v-cal-button-hover-color;
+    background-color: $v-cal-button-hover-bg;
+  }
+
+  &.is-primary {
+    border-color: $v-cal-primary;
+    background-color: $v-cal-primary;
+    color: #fff;
   }
 
   &:disabled,
@@ -28,11 +45,7 @@
     background-color: $v-cal-button-disabled-bg;
     color: $v-cal-button-disabled-color;
     cursor: $v-cal-button-disabled-cursor;
-  }
-
-  &:hover {
-    color: $v-cal-button-hover-color;
-    background-color: $v-cal-button-hover-bg;
+    border-color: $v-cal-button-border-color;
   }
 }
 
@@ -79,11 +92,12 @@
     display: flex;
   }
 
-  .v-cal-event-list {
-    padding: $v-cal-events-list-padding;
-  }
+  //.v-cal-event-list {
+  //  padding: $v-cal-events-list-padding;
+  //}
 
   .v-cal-event-item {
+    @include unselectable;
     position: relative;
     flex-grow: 1;
     background-color: $v-cal-event-bg;
@@ -93,10 +107,6 @@
     text-align: left;
     white-space: nowrap;
     overflow: hidden;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     cursor: pointer;
 
     &::after {

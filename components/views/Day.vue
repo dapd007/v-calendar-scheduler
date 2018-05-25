@@ -33,11 +33,10 @@
                             <div class="v-cal-event-list">
                                 <event-item
                                         v-for="event, index in day.events"
-                                        v-if="event.startTime && time.format('HH') === event.startTime.split(':')[0]"
+                                        v-if="event.startTime && time.hours() === event.startTime.hours()"
                                         :key="index"
                                         :event="event"
-                                        :use12="use12"
-                                        @click.stop="eventBus.$emit('event-clicked', event)">
+                                        :use12="use12">
                                 </event-item>
                             </div>
                         </div>
