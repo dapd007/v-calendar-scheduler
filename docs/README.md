@@ -11,6 +11,39 @@ footer: MIT Licensed | Copyright © 2018-present David Paternina
     }
 </style>
 
-<vue-scheduler/>
+<vue-scheduler :event-dialog-config="{
+        title: 'Custom dialog title',
+        createButtonLabel: 'Save event thingy',
+        enableTimeInputs: false,
+        fields: [
+            {
+                name: 'name',
+                label: 'Event name'
+            },
+            {
+                name: 'email',
+                type: 'email',
+                required: true,
+                label: 'E-mail',
+                value: 'email@example.com'
+            },
+            {
+                label: 'Grouped',
+                fields: [
+                    {
+                        name: 'Field 1'
+                    },
+                    {
+                        name: 'Field 2'
+                    }
+                ]
+            },
+            {
+                name: 'comments',
+                type: 'textarea',
+                label: 'comments'
+            }
+        ]
+    }"/>
 
 Created by [David Paternina](http://davidpaternina.com/)

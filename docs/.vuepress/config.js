@@ -21,6 +21,7 @@ module.exports = {
                         'getting-started',
                         'config',
                         'events',
+                        'callbacks',
                         'customization',
                         'demos'
                     ]

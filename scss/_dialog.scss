@@ -5,6 +5,11 @@
   top: 0;
   bottom: 0;
   z-index: 999;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: inherit;
+  }
 
   .v-cal-dialog__bg {
     background-color: rgba(0,0,0,.3);
@@ -112,6 +117,7 @@
       select {
         @include soft_transition;
         display: block;
+        font-family: inherit;
         width: 100%;
         border: 1px solid $v-cal-field-idle-border-color;
         border-radius: $v-cal-field-border-radius;

@@ -10,6 +10,11 @@
   background-color: $v-cal-body-bg;
   color: $v-cal-font-color;
   box-shadow: $v-cal-body-shadow;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: inherit;
+  }
 }
 
 .v-cal-button {
@@ -132,6 +137,10 @@
     .v-cal-event-time {
       font-weight: bold;
       font-size: .85rem;
+    }
+
+    .v-cal-event-name {
+      margin-left: 5px;
     }
   }
 

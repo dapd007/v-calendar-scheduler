@@ -1,10 +1,16 @@
 # Introduction
 
-Vue Calendar Scheduler is a customizable calendar that allows you to display events with date and time.
+Vue Calendar Scheduler is a customizable calendar that allows you to display and create events with date, times and custom attributes.
 
-The calendar also [emits events](/guide/events.md) when the user clicks on a day, an event or a time.
+## The Event model
 
-::: warning Events creation
-Please note that the calendar **does not** include a way to create events.
-The idea is to allow developer to adapt the calendar to their own needs, and the use of events leaves the door open to custom implementations. 
-:::
+An `Event` model is contained within the plugin to handle some under-the-hood logic **without filling the objects** provided by the developer with data they don't need.
+Any object provided in the `[events]` prop of the calendar will be transformed to an `Event` instance.
+
+To learn more about the `Event` model check the [Event model section](/guide/events.md).  
+
+## Callbacks
+
+The calendar provides a few callbacks for user interaction events, such as clicking a day, a time or an event.
+
+Check the [callbacks section](/guide/callbacks.md) to learn more.
