@@ -117,6 +117,7 @@
       select {
         @include soft_transition;
         display: block;
+        font-family: inherit;
         width: 100%;
         border: 1px solid $v-cal-field-idle-border-color;
         border-radius: $v-cal-field-border-radius;
