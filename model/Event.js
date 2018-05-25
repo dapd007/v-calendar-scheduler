@@ -1,5 +1,4 @@
 import moment from 'moment';
-import config from '../utils/config';
 
 export default function Event(plainEvent) {
 
@@ -39,20 +38,6 @@ export default function Event(plainEvent) {
                 });
             }
         });
-
-        //  Set Event display function
-        if ( config.onEventDisplay ) {
-
-            Object.defineProperty(this, 'displayText', {
-                get: () => {
-                    if ( typeof config.eventDisplay === 'function') {
-                        return config.eventDisplay(this);
-                    } else {
-                        return _e[config.eventDisplay];
-                    }
-                }
-            });
-        }
     }
     else
         _e = {
@@ -95,4 +80,18 @@ export default function Event(plainEvent) {
     });
 
     Object.defineProperty(this, 'overlaps', { get: () => _overlaps, set: (nOverlaps) => { _overlaps = nOverlaps; }});
+
+    Object.defineProperty(this, 'bindGetter', {
+        get: () => function (attr, value) {
+            return Object.defineProperty(this, attr, {
+                get: () => {
+                    if ( typeof value === 'function') {
+                        return value(this);
+                    } else {
+                        return _e[value];
+                    }
+                }
+            });
+        }
+    })
 };

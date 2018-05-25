@@ -116,6 +116,10 @@
                 type: Boolean,
                 default: () => config.showTimeMarker
             },
+            eventDisplay: {
+                type: [String, Function],
+                default: () => config.eventDisplay
+            },
             disableDialog: {
                 type: Boolean,
                 default: false
@@ -274,7 +278,7 @@
         computed: {
             newEvents() {
                 return this.events.map(e => {
-                    return new Event(e);
+                    return new Event(e).bindGetter('displayText', this.eventDisplay);
                 });
             },
             isPrevAllowed() {
