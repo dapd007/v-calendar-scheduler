@@ -6,7 +6,7 @@ module.exports = {
         ['meta', { property: 'og:url', content: 'https://v-calendar.davidpaternina.com/' }],
         ['meta', { property: 'og:title', content: 'Vue Calendar Scheduler' }],
         ['meta', { property: 'og:description', content: 'Calendar scheduler component for VueJs' }],
-        ['meta', { property: 'og:image', content: 'https://v-calendar.davidpaternina.com/assets/fb-jumbo.png' }]
+        ['meta', { property: 'og:image', content: 'https://v-calendar.davidpaternina.com/assets/img/fb-jumbo.png' }]
     ],
     themeConfig: {
         repo: 'dapd007/v-calendar-scheduler',
