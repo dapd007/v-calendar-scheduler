@@ -31,6 +31,7 @@
   }
 
   &.v-cal-button--is-active {
+    background-color: $v-cal-button-active-bg;
     color: $v-cal-button-active-color;
   }
 
@@ -97,10 +98,6 @@
     display: flex;
   }
 
-  //.v-cal-event-list {
-  //  padding: $v-cal-events-list-padding;
-  //}
-
   .v-cal-event-item {
     @include unselectable;
     position: relative;
@@ -147,6 +144,11 @@
   &.v-cal-content--month,
   &.v-cal-content--week,
   &.v-cal-content--day {
+
+    .v-cal-days .v-cal-day {
+      background: $v-cal-day-bg;
+    }
+
     .v-cal-weekdays {
       background-color: $v-cal-days-head-bg;
       color: $v-cal-days-head-color;
@@ -181,7 +183,6 @@
       text-align: right;
       min-height: $v-cal-day-month-height;
       padding-bottom: 2px;
-      background-color: $v-cal-day-month-bg;
 
       &.v-cal-day--month {
         overflow: hidden;
@@ -217,6 +218,7 @@
 
   &.v-cal-content--month .v-cal-day,
   &.v-cal-content--week .v-cal-day {
+
     &.is-disabled {
       background-color: $v-cal-day-disabled-bg;
       color: $v-cal-day-disabled-color;
@@ -233,6 +235,7 @@
 
   &.v-cal-content--week .v-cal-times,
   &.v-cal-content--day .v-cal-times {
+    background: $v-cal-times-bg;
     font-size: $v-cal-times-font-size;
     font-weight: normal;
     border-right: 1px solid $v-cal-times-border-color;

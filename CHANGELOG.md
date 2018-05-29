@@ -8,10 +8,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Event dialog custom fields support:
     - Checkbox (Single, group)
-    - Radio
+    - Radio 
     - Select (Single, multiple)
 
 - Event model validators.
+
+## [[0.7.1]](https://github.com/dapd007/v-calendar-scheduler/releases/tag/v0.7.1) - 2018-05-29
+### Fixed
+- Set Scss variables as `!default` to allow customization.
+
 
 ## [[0.7.0]](https://github.com/dapd007/v-calendar-scheduler/releases/tag/v0.7.0) - 2018-05-25
 ### Added

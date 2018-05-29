@@ -7,57 +7,61 @@ $v-cal-blue: #3B86FF;
 
 //  Derived variables
 
-$v-cal-font-color: $v-cal-blueish-grey;
-$v-cal-primary: $v-cal-blue;
+$v-cal-font-color: $v-cal-blueish-grey !default;
+$v-cal-primary: $v-cal-blue !default;
+
+//  Title
+$v-cal-title-font-size: 18px !default;
 
 //  Calendar body
-$v-cal-body-bg: $white;
-$v-cal-body-shadow: 0 2px 6px rgba(0,0,0,.04);
+$v-cal-body-bg: $white !default;
+$v-cal-body-shadow: 0 2px 6px rgba(0,0,0,.04) !default;
 $v-cal-body-padding: 20px;
 
 //  Calendar header
 $v-cal-header-padding: 0 0 40px;
 
 //  Calendar content
-$v-cal-content-border-color: #EAF0F4;
+$v-cal-content-border-color: #EAF0F4 !default;
 
 //  Calendar content head
-$v-cal-days-head-bg: #F5F6FA;
-$v-cal-days-head-border-color: #EAF0F4;
-$v-cal-days-head-color: #A3A6B4;
-$v-cal-days-head-font-size: .75rem;
-$v-cal-days-head-font-weight: bold;
-
-//  Days - Month
-$v-cal-day-border-color: #EAF0F4;
-$v-cal-day-number-font-size: .75rem;
-$v-cal-day-number-padding: 10px;
-$v-cal-day-month-height: 140px;
-
-$v-cal-day-month-bg: $white;
-$v-cal-day-month-hover-bg: #fcfcfc;
+$v-cal-days-head-bg: #F5F6FA !default;
+$v-cal-days-head-border-color: #EAF0F4 !default;
+$v-cal-days-head-color: #A3A6B4 !default;
+$v-cal-days-head-font-size: .75rem !default;
+$v-cal-days-head-font-weight: bold !default;
 
 //  Days
-$v-cal-day-color: #43425D;
-$v-cal-day-diff-month-color: rgba(67, 66, 93, .3);
+$v-cal-day-bg: $white !default;
+$v-cal-day-border-color: #EAF0F4 !default;
 
-$v-cal-day-today-bg: #F5F6FA;
+$v-cal-day-diff-month-color: rgba(67, 66, 93, .3) !default;
 
-$v-cal-day-disabled-bg: #f0f0f0;
-$v-cal-day-disabled-color: #b0b0b0;
+$v-cal-day-today-bg: #F5F6FA !default;
 
-$v-cal-times-font-size: .8125rem;
-$v-cal-times-border-color: #EAF0F4;
+$v-cal-day-disabled-bg: #f0f0f0 !default;
+$v-cal-day-disabled-color: #b0b0b0 !default;
+
+//  Days - Month
+$v-cal-day-number-font-size: .75rem !default;
+$v-cal-day-number-padding: 10px !default;
+$v-cal-day-month-height: 140px !default;
+
+$v-cal-day-month-hover-bg: #fcfcfc !default;
 
 //  Week - Day
-$v-cal-time-block-bg: transparent;
-$v-cal-time-block-hover-bg: #fcfcfc;
+$v-cal-time-block-bg: transparent !default;
+$v-cal-time-block-hover-bg: #fcfcfc !default;
+
+//  Week - Day times
+$v-cal-times-bg: $white !default;
+$v-cal-times-font-size: .8125rem !default;
+$v-cal-times-border-color: #EAF0F4 !default;
 
 //  Events
-$v-cal-events-list-padding: 2px;
-$v-cal-event-bg: $v-cal-primary;
-$v-cal-event-color: $white;
-$v-cal-event-border-radius: 4px;
+$v-cal-event-bg: $v-cal-primary !default;
+$v-cal-event-color: $white !default;
+$v-cal-event-border-radius: 4px !default;
 
 $v-cal-event-padding-sides: 14px;
 $v-cal-event-padding: 7px $v-cal-event-padding-sides;
@@ -66,47 +70,48 @@ $v-cal-event-week-padding: 3px 14px;
 $v-cal-event-week-font-size: .9rem;
 
 //  Time marker
-$v-cal-time-marker-color: $v-cal-blue;
+$v-cal-time-marker-color: $v-cal-primary !default;
 
 //  Buttons
-$v-cal-button-bg: $white;
-$v-cal-button-shadow: 0 2px 3px rgba(0,0,0,.05);
-$v-cal-button-padding: 8px 18px;
-$v-cal-button-border-color: $v-cal-light-grey;
-$v-cal-button-border-radius: 4px;
-$v-cal-button-active-color: $v-cal-primary;
-$v-cal-button-hover-color: $v-cal-primary;
-$v-cal-button-hover-bg: $v-cal-whitish;
-$v-cal-button-disabled-bg: #f0f0f0;
-$v-cal-button-disabled-color: #d0d0d0;
-$v-cal-button-disabled-cursor: not-allowed;
+$v-cal-button-bg: $white !default;
+$v-cal-button-shadow: 0 2px 3px rgba(0,0,0,.05) !default;
+$v-cal-button-padding: 8px 18px !default;
+$v-cal-button-border-color: $v-cal-light-grey !default;
+$v-cal-button-border-radius: 4px !default;
 
-//  Select
-$v-cal-select-arrow-color: red;
+$v-cal-button-active-bg: $v-cal-button-bg !default;
+$v-cal-button-active-color: $v-cal-primary !default;
 
-//  Title
-$v-cal-title-font-size: 18px;
+$v-cal-button-hover-bg: $v-cal-whitish !default;
+$v-cal-button-hover-color: $v-cal-primary !default;
+
+$v-cal-button-disabled-bg: #f0f0f0 !default;
+$v-cal-button-disabled-color: #d0d0d0 !default;
+$v-cal-button-disabled-cursor: not-allowed !default;
 
 //  Dialog
 
-$v-cal-dialog-bg: rgba(0,0,0,.3);
-$v-cal-dialog-shadow: 0 0 6px rgba(0,0,0,.4);
-$v-cal-dialog-card-bg: $white;
+$v-cal-dialog-bg: rgba(0,0,0,.3) !default;
+$v-cal-dialog-card-bg: $white !default;
+$v-cal-dialog-card-max-width: 500px !default;
+$v-cal-dialog-shadow: 0 0 6px rgba(0,0,0,.4) !default;
 
-$v-cal-dialog-header-padding: 20px;
-$v-cal-dialog-header-border-color: #EAF0F4;
+$v-cal-dialog-header-padding: 20px !default;
+$v-cal-dialog-header-border-color: #EAF0F4 !default;
 
-$v-cal-dialog-body-padding: 20px;
+$v-cal-dialog-title-font-size: 13px !default;
 
-$v-cal-field-border-radius: 4px;
-$v-cal-field-padding: 10px 12px;
+$v-cal-dialog-close-width: 18px !default;
+$v-cal-dialog-close-color: #BCBCCB !default;
 
-$v-cal-field-idle-border-color: #E8E9EC;
-$v-cal-field-hover-border-color: #808495;
-$v-cal-field-active-border-color: $v-cal-primary;
+$v-cal-dialog-body-padding: 20px !default;
 
-$v-cal-dialog-footer-padding: 20px;
-$v-cal-dialog-footer-border-color: #EAF0F4;
+$v-cal-field-border-radius: 4px !default;
+$v-cal-field-padding: 10px 12px !default;
 
-$v-cal-dialog-close-width: 18px;
-$v-cal-dialog-close-color: #BCBCCB;
+$v-cal-field-idle-border-color: #E8E9EC !default;
+$v-cal-field-hover-border-color: #808495 !default;
+$v-cal-field-active-border-color: $v-cal-primary !default;
+
+$v-cal-dialog-footer-padding: 20px !default;
+$v-cal-dialog-footer-border-color: #EAF0F4 !default;
