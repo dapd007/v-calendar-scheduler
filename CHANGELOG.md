@@ -12,6 +12,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
     - Select (Single, multiple)
 
 - Event model validators.
+- Event edition.
+- Custom time picker, because default time picker varies from browser to browser and they all suck.
+- Creation of recurring events.
+- Drag to create.
+- Drag and drop.
+
+## [[0.7.2]](https://github.com/dapd007/v-calendar-scheduler/releases/tag/v0.7.2) - 2018-05-30
+### Fixed
+- Vue events are now unbind on `beforeDestroy` so they don't trigger multiple times if the component is re-mounted. 
 
 ## [[0.7.1]](https://github.com/dapd007/v-calendar-scheduler/releases/tag/v0.7.1) - 2018-05-29
 ### Fixed
