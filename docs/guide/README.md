@@ -14,3 +14,7 @@ To learn more about the `Event` model check the [Event model section](/guide/eve
 The calendar provides a few callbacks for user interaction events, such as clicking a day, a time or an event.
 
 Check the [callbacks section](/guide/callbacks.md) to learn more.
+
+## Current Issues
+
+- Because of the new Event model, new Events **can't be created without a `startTime`**. This will be fixed in the next release with the introduction of Event model validators.

@@ -15,6 +15,7 @@ module.exports = {
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Documentation', link: '/guide/' },
+            { text: 'Changelog', link: 'https://github.com/dapd007/v-calendar-scheduler/blob/master/CHANGELOG.md' },
         ],
         sidebar: {
             '/guide/': [
