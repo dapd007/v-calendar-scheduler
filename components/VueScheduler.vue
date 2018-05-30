@@ -141,8 +141,15 @@
             this.activeView = this.initialView;
             this.activeDate = moment(this.initialDate);
 
+            console.log('mounted');
+
             //  Bind events
             this.bindEvents();
+        },
+        beforeDestroy() {
+            EventBus.$off('day-clicked');
+            EventBus.$off('time-clicked');
+            EventBus.$off('event-clicked');
         },
         methods: {
             openEventDialog(data) {
