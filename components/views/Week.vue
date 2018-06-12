@@ -29,6 +29,7 @@
                         v-for="event, index in day.events.filter(e => !e.startTime)"
                         :key="index"
                         :event="event"
+                        :has-dynamic-size="false"
                         :use12="use12">
                 </event-item>
 
