@@ -18,6 +18,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Drag to create.
 - Drag and drop.
 
+## [[0.7.3]](https://github.com/dapd007/v-calendar-scheduler/releases/tag/v0.7.3) - 2018-06-13
+### Fixed
+- Fixed a bug on all day events in Week view: events size are evaluated but it shouldn't. Thanks to [aguingand](https://github.com/dapd007/v-calendar-scheduler/pull/1) 
+
 ## [[0.7.2]](https://github.com/dapd007/v-calendar-scheduler/releases/tag/v0.7.2) - 2018-05-30
 ### Fixed
 - Vue events are now unbind on `beforeDestroy` so they don't trigger multiple times if the component is re-mounted. 
