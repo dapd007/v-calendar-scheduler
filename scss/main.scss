@@ -369,7 +369,7 @@
     .v-cal-day__hour-block.is-now,
     &:first-child .v-cal-day__hour-block.is-now{
       $i: 10;
-      @while $i < 60 {
+      @while $i <= 60 {
 
         &.is-#{$i}::after,
         &.is-#{$i}::before {
