@@ -40,7 +40,7 @@ If you pass an event **with** a `startTime` but **without** an `endTime` you wil
 The format for the times is `"HH:mm"`, using 24-hour.
 
 ::: tip
-Any event you later to the array, as well as any event created using the [Event dialog](#event-dialog), will appear in the calendar automatically.
+Any event you later add to the array, as well as any event created using the [Event dialog](#event-dialog), will appear in the calendar automatically.
 ::: 
 
 ## Custom attributes
