@@ -42,7 +42,7 @@
         components: { EventItem },
         data() {
             return {
-                weekdays: moment.weekdaysShort(),
+                weekdays: moment.weekdaysShort(true),
                 calendar: [],
             }
         },
