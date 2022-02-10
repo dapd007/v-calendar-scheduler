@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
-    "node-sass": "^4.5.3",
+    "node-sass": "^7.0.0",
     "node-sass-import": "^1.1.1",
     "postcss-cli": "^4.1.0",
     "rimraf": "^2.6.1",
