@@ -38,6 +38,6 @@
     "node-sass-import": "^1.1.1",
     "postcss-cli": "^4.1.0",
     "rimraf": "^2.6.1",
-    "vuepress": "^0.8.4"
+    "vuepress": "^1.9.7"
   }
 }
